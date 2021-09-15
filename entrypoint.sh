@@ -3,6 +3,7 @@ echo "$(application/vnd.github.v3+json)"
 curl -L "https://github.com/patchkit-net/patchkit-tools/releases/download/v3.1.2/patchkit-tools-linux-x86_64.zip" --output patchkit-tools-linux-x86_64.zip
 unzip -o patchkit-tools-linux-x86_64.zip -d patchkit/
 
+echo $path
 curl -L $path --output output.zip
 unzip -o patchkit-tools-linux-x86_64.zip -d patchkit/output
 
