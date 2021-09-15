@@ -12,8 +12,10 @@ echo "#    BUILD   #"
 echo "##############"
 find / -name "build.zip"
 
-curl -L $path --output output.zip
-unzip -o patchkit-tools-linux-x86_64.zip -d patchkit/output
+echo $path
+
+#curl -L $path --output output.zip
+unzip -o $path -d patchkit/output
 
 echo "##############"
 echo "#   UPLOAD   #"
