@@ -16,14 +16,14 @@ echo $SECRET_KEY
 echo $API_KEY
 echo $ZIP_PATH
 
+ls -R $ZIP_PATH
 #curl -L $ZIP_PATH --output output.zip
 unzip -o $ZIP_PATH -d patchkit/output/
+
 
 echo "##############"
 echo "#   UPLOAD   #"
 echo "##############"
-
-#ls -R /
 
 chmod -R +x patchkit/
 cd ./patchkit
