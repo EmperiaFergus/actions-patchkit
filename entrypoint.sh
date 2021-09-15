@@ -12,7 +12,9 @@ echo "#    BUILD   #"
 echo "##############"
 find / -name "build.zip"
 
-echo $path
+echo $1
+echo $2
+echo $3
 
 #curl -L $path --output output.zip
 unzip -o $path -d patchkit/output
@@ -22,4 +24,4 @@ echo "#   UPLOAD   #"
 echo "##############"
 chmod -R +x patchkit/
 cd ./patchkit
-bash ./patchkit-tools make-version -s $secret-key -a $api-key -l github_actions -f ./output -x
+bash ./patchkit-tools make-version -s $1 -a $2 -l github_actions -f ./output -x
