@@ -22,6 +22,9 @@ unzip -o $ZIP_PATH -d patchkit/output
 echo "##############"
 echo "#   UPLOAD   #"
 echo "##############"
+
+ls -R /home/runner/work/unity-builder/
+
 chmod -R +x patchkit/
 cd ./patchkit
 bash ./patchkit-tools make-version -s $SECRET_KEY -a $API_KEY -l github_actions -f ./output -x
