@@ -17,7 +17,7 @@ echo $API_KEY
 echo $ZIP_PATH
 
 #curl -L $ZIP_PATH --output output.zip
-#unzip -o $ZIP_PATH -d patchkit/output
+unzip -o $ZIP_PATH -d patchkit/output
 
 echo "##############"
 echo "#   UPLOAD   #"
@@ -27,4 +27,4 @@ echo "##############"
 
 chmod -R +x patchkit/
 cd ./patchkit
-bash ./patchkit-tools make-version -s $SECRET_KEY -a $API_KEY -l github_actions -f $ZIP_PATH -x
+bash ./patchkit-tools make-version -s $SECRET_KEY -a $API_KEY -l github_actions -f ./output -x
