@@ -1,0 +1,22 @@
+﻿# action.yml
+name: 'Patchkit'
+description: 'upload artifact to patchkit'
+inputs:
+  api-key:  # api key
+    description: 'api key'
+    required: true
+    default: 'null'
+  secret-key: # secret key
+    description: 'secret key'
+    required: true
+    default: 'null'
+    path: # path
+      description: 'path of zip to upload'
+      required: true
+      default: 'null'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.artifactPath }}
