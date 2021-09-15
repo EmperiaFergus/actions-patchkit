@@ -18,5 +18,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.artifactPath }}
+  env:
+    SECRET_KEY: ${{ inputs.secret-key }}
+    API_KEY: ${{ inputs.api-key }}
+    PATH: ${{ inputs.path }}
