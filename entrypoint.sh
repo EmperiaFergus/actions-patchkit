@@ -10,14 +10,14 @@ unzip -o patchkit-tools-linux-x86_64.zip -d patchkit/
 echo "##############"
 echo "#    BUILD   #"
 echo "##############"
-find / -name "build.zip"
+FILE=$(find / -name "build.zip")
 
 echo $SECRET_KEY
 echo $API_KEY
 echo $ZIP_PATH
 
-curl -L $ZIP_PATH --output output.zip
-unzip -o $ZIP_PATH -d patchkit/output
+#curl -L $ZIP_PATH --output output.zip
+unzip -o "$FILE" -d patchkit/output
 
 echo "##############"
 echo "#   UPLOAD   #"
