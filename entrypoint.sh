@@ -18,7 +18,7 @@ echo $ZIP_PATH
 
 ls -R $ZIP_PATH
 #curl -L $ZIP_PATH --output output.zip
-unzip -o $ZIP_PATH -d patchkit/output/
+unzip -o ""$ZIP_PATH"/build.zip -d patchkit/output/
 
 
 echo "##############"
