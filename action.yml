@@ -21,4 +21,4 @@ runs:
   env:
     SECRET_KEY: ${{ inputs.secret-key }}
     API_KEY: ${{ inputs.api-key }}
-    PATH: ${{ inputs.path }}
+    ZIP_PATH: ${{ inputs.path }}

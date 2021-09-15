@@ -14,10 +14,10 @@ find / -name "build.zip"
 
 echo $SECRET_KEY
 echo $API_KEY
-echo $PATH
+echo $ZIP_PATH
 
-curl -L $PATH --output output.zip
-unzip -o $PATH-d patchkit/output
+curl -L $ZIP_PATH --output output.zip
+unzip -o $ZIP_PATH-d patchkit/output
 
 echo "##############"
 echo "#   UPLOAD   #"
