@@ -23,7 +23,7 @@ echo "##############"
 echo "#   UPLOAD   #"
 echo "##############"
 
-ls -R /home/runner/work/unity-builder/
+ls -R /
 
 chmod -R +x patchkit/
 cd ./patchkit
