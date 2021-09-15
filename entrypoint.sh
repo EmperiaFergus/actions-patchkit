@@ -17,7 +17,7 @@ echo $API_KEY
 echo $ZIP_PATH
 
 curl -L $ZIP_PATH --output output.zip
-unzip -o $ZIP_PATH-d patchkit/output
+unzip -o $ZIP_PATH -d patchkit/output
 
 echo "##############"
 echo "#   UPLOAD   #"
