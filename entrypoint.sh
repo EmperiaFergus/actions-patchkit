@@ -33,8 +33,9 @@ if [ -s app/core/utils/progress_bar.rb ]; then
   echo "progress bar exists"
 fi
 
-sed 's/IO\.console\.winsize\[1\]/\"800\"/g' app/core/utils/progress_bar.rb
+sed 's/IO\.console\.winsize\[1\]/\"1\"/g' app/core/utils/progress_bar.rb
 if [ -s changelog.txt ]; then
   echo "changes made!"
 fi  
-bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
+#bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
+bash ./patchkit-tools make-version -s "ac1ae6ae296777d8f700b72ea5231cc8" -a "ccfb4cd4e4aea80d14fcc2b649001f0b" -l github_actions -f ./ -x
