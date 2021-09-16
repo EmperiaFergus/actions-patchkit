@@ -33,7 +33,7 @@ if [ -s app/core/utils/progress_bar.rb ]; then
   echo "progress bar exists"
 fi
 
-sed -i 's/IO\.console\.winsize\[1\]/\"800\"/g' app/core/utils/progress_bar.rb
+sed -i 's/IO\.console\.winsize\[1\]/800/g' app/core/utils/progress_bar.rb
 
 sed -n '21p' < app/core/utils/progress_bar.rb
 #if [ -s changelog.txt ]; then
