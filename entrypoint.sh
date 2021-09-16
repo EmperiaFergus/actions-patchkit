@@ -27,4 +27,6 @@ echo "##############"
 
 chmod -R +x patchkit/
 cd ./patchkit
+sed -i 's/IO.console.winsize[1]/800/g' ./app/core/utils/progress_bar.rb
+
 bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
