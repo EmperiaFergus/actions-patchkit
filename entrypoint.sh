@@ -27,6 +27,14 @@ echo "##############"
 
 chmod -R +x patchkit/
 cd ./patchkit
-sed -i 's/IO.console.winsize[1]/800/g' ./app/core/utils/progress_bar.rb
 
+#if [ -s app/core/utils/progress_bar.rb]; then
+if [ -s app/core/utils/progress_bar.rb ]; then
+  echo "progress bar exists"
+fi
+
+sed 's/IO\.console\.winsize\[1\]/800/g' app/core/utils/progress_bar.rb
+if [ -s changelog.txt ]; then
+  echo "changes made!"
+fi  
 bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
