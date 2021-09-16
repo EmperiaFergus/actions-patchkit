@@ -26,8 +26,9 @@ rm "patchkit/output/UnityCrashHandler64.exe"
 echo "##############"
 echo "#   UPLOAD   #"
 echo "##############"
-
+ls -R
 chmod -R +x patchkit/
+echo "moving to patchkit"
 cd ./patchkit
 
 #if [ -s app/core/utils/progress_bar.rb]; then
