@@ -27,5 +27,4 @@ echo "##############"
 
 chmod -R +x patchkit/
 cd ./patchkit
-bundle update capistrano-passenger.
-bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
+bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x > /dev/null 2>&1
