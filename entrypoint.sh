@@ -19,7 +19,9 @@ echo $ZIP_PATH
 ls -R $ZIP_PATH
 #curl -L $ZIP_PATH --output output.zip
 unzip -o "$ZIP_PATH"/build.zip -d patchkit/output/
-
+#we can only upload a folder with one exe
+rm "patchkit/output/UnityCrashHandler32.exe"
+rm "patchkit/output/UnityCrashHandler64.exe"
 
 echo "##############"
 echo "#   UPLOAD   #"
@@ -39,5 +41,5 @@ sed -n '21p' < app/core/utils/progress_bar.rb
 #if [ -s changelog.txt ]; then
 #  echo "changes made!"
 #fi  
-#bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
-bash ./patchkit-tools make-version -s "ac1ae6ae296777d8f700b72ea5231cc8" -a "ccfb4cd4e4aea80d14fcc2b649001f0b" -l github_actions -f ./ -x
+bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
+#bash ./patchkit-tools make-version -s "ac1ae6ae296777d8f700b72ea5231cc8" -a "ccfb4cd4e4aea80d14fcc2b649001f0b" -l github_actions -f ./ -x
