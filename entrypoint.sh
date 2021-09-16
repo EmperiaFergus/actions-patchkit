@@ -27,6 +27,5 @@ echo "##############"
 
 chmod -R +x patchkit/
 cd ./patchkit
-#set the width of the terminal for patchkit
-set :format_options, truncate: 80
+bundle update capistrano-passenger.
 bash ./patchkit-tools make-version -s "$SECRET_KEY" -a "$API_KEY" -l github_actions -f ./output -x
