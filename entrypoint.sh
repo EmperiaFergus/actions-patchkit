@@ -18,7 +18,7 @@ echo $ZIP_PATH
 
 ls -R $ZIP_PATH
 #curl -L $ZIP_PATH --output output.zip
-unzip -o "$ZIP_PATH"/build.zip -d patchkit/output/
+unzip -o "$ZIP_PATH"/build.zip -d ./patchkit/output/
 #we can only upload a folder with one exe
 rm "patchkit/output/UnityCrashHandler32.exe"
 rm "patchkit/output/UnityCrashHandler64.exe"
