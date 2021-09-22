@@ -21,7 +21,7 @@ ls -R $ZIP_PATH
 
 rm "patchkit/output/UnityCrashHandler32.exe"
 rm "patchkit/output/UnityCrashHandler64.exe"
-
+rm "patchkit/output/StandaloneOSX"
 echo "##############"
 echo "#   UPLOAD   #"
 echo "##############"
